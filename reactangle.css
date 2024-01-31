@@ -1,0 +1,113 @@
+.flow-rectangle {
+  cursor: initial;
+  padding: 0 8px;
+  border: $flow-border-width solid $flow-border-color;
+  height: 100%;
+  border-radius: $flow-border-radius;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  > .editable-input > p,
+  > .editable-input > input {
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+  }
+  input {
+    outline: none;
+    border: none;
+    padding: 0;
+    border: 1px solid #000;
+    background-color: transparent;
+  }
+  .icon-box-wrapper {
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+    .icon-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      .icon {
+        width: 40px;
+        height: 30px;
+        border: 2px solid $flow-border-color;
+        border-radius: 0.3rem;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      > p {
+        font-size: 0.6rem;
+        font-weight: 600;
+        font-family: $font-monstret-sans, $font-serif;
+      }
+    }
+  }
+
+  .count-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px; /* Adjust the width and height to make it square */
+    height: 30px;
+    border-radius: 5px; /* Adjust the border radius to make it square */
+    background: transparent; /* Set the background to transparent */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  // .action-menu {
+  //   padding: 1rem;
+  //   background-color: rgb(26, 24, 24);
+  //   position: absolute;
+  //   top: -70px;
+  //   right: -50px;
+  // }
+  .action-menu {
+    padding: 1rem;
+    background-color: $light-gray;
+    position: fixed;
+    top: -50px;
+    right: -10px;
+    z-index: 2;
+    width: 50px; /* Adjust the width to make it a square */
+    height: 50px; /* Adjust the height to make it a square */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Style for the checkbox */
+  .action-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .action-menu li {
+    cursor: pointer;
+  }
+  
+  .action-menu svg {
+    color: green; /* Set the color to green */
+    width: 24px; /* Adjust the size as needed */
+    height: 24px; /* Adjust the size as needed */
+  }
+  .icon-menu-wrapper {
+    padding: 1rem;
+    background-color: $light-gray;
+    position: absolute;
+    top: -50px;
+    right: -40px;
+  }
+}
